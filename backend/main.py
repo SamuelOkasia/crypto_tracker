@@ -47,7 +47,6 @@ async def get_crypto_news() -> List[Dict]:
 
 @app.get("/historical_data/")
 async def get_historical_data():
-    # Adjust the path to your CSV file as necessary
     df = pd.read_csv("btc_2015_2024.csv")
     return df.to_dict(orient="records")
 
